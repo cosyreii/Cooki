@@ -8,7 +8,7 @@ function clickHandler() {
     //Challenge!: Change text for multiple of 3 "nam", multiple of 5 change it to "num", and if it is a multiple of both 3 and 5 change it to "nem"
 
     // % means Modulo, it does magic stuff (remainder of a division) - in this case count % 10 = every multiple of 10 returns you back to 0.
-    if (count % 10 == 0) {
+    if (count % 100 == 0) {
         header.innerText = "yippee " + count.toString() + " cookies!";
     } else {
         header.innerText = "nom " + count.toString() + " cookies";
