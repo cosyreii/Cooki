@@ -1,6 +1,7 @@
 let header = document.getElementById("NomText");
 let cookiButton = document.getElementById("CookiButton");
 let resetButton = document.getElementById("resetButton");
+let ACButton = document.getElementById("ACButton");
 
 let count = 0;
 
@@ -44,13 +45,27 @@ cookiButton.addEventListener("click", function () {
   DisplayCount();
 });
 
+let AutoClickers = [];
+
+ACButton.addEventListener("click", function () {
+  if (count < 10) return;
+
+  count -= 10;
+  localStorage.setItem("CookieCount", count.toString());
+  DisplayCount();
+  let newInterval = setInterval(function () {
+    count++;
+    DisplayCount();
+  }, 1000);
+  AutoClickers.push(newInterval);
+});
+
 resetButton.addEventListener("click", function () {
   count = 0;
   localStorage.removeItem("CookieCount");
   DisplayCount();
+  for (let Clicker of AutoClickers) {
+    clearInterval(Clicker);
+  } 
+  AutoClickers = [];
 });
-
-// setInterval(function () {
-//   count++;
-//   DisplayCount();
-// }, 1000);
