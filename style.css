@@ -1,0 +1,47 @@
+body {
+    background: #fff8d9
+}
+
+.div-thing {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    color: #693406;
+    font-family: "Comic Sans MS";
+}
+
+.cooki {
+    border: none;
+    background: none;
+    box-shadow: 0px 0px 14px #a3887190;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 5000px;
+    overflow: clip;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.05s;
+}
+
+.cooki img {
+    width: 150%
+}
+
+.cooki:hover {
+    scale: 1.1;
+    box-shadow: 0px 0px 20px #a3887170;
+}
+
+.cooki:active {
+    scale: 0.95;
+}
