@@ -1,56 +1,141 @@
 body {
-    background: #fff8d9
+  background: #fff8d9;
+  color: #693406;
+  font-family: "Comic Sans MS";
 }
 
 .CookiDiv {
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ResetDiv {
-    user-select: none;
-    display: flex;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.header {
-    color: #693406;
-    font-family: "Comic Sans MS";
+  user-select: none;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .cooki {
-    border: none;
-    background: none;
-    box-shadow: 0px 0px 14px #a3887190;
+  border: none;
+  background: none;
+  box-shadow: 0px 0px 14px #a3887190;
 
-    width: 5rem;
-    height: 5rem;
+  width: 10rem;
+  height: 10rem;
 
-    border-radius: 5000px;
-    overflow: clip;
+  border-radius: 5000px;
+  overflow: clip;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: all 0.05s;
+  transition: all 0.05s;
 }
 
 .cooki img {
-    width: 150%
+  width: 150%;
 }
 
 .cooki:hover {
-    scale: 1.1;
-    box-shadow: 0px 0px 20px #a3887170;
+  scale: 1.1;
+  box-shadow: 0px 0px 20px #a3887170;
 }
 
 .cooki:active {
-    scale: 0.95;
+  scale: 0.95;
+}
+
+.ACButton {
+  border: none;
+  background: none;
+
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 5000px;
+  overflow: clip;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.05s;
+}
+
+.ACButton img {
+  width: 100%;
+}
+
+.ACButton:hover {
+  scale: 1.1;
+}
+
+.ACButton:active {
+  scale: 0.95;
+}
+
+.ShopDiv {
+  user-select: none;
+  display: flex;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ShopDiv h1 {
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.ShopDiv h2 {
+  margin: 0;
+  width: 4rem;
+  text-align: center;
+}
+
+.AutoClicker {
+  user-select: none;
+  display: flex;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ACDescription {
+  margin: 0;
+}
+
+.ACInfo {
+  user-select: none;
+  display: flex;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  text-align: center;
+}
+
+.border {
+  border-color: #693406;
+  width: 100%;
+  border-top: 10px;
+}
+
+.Shop {
+  color: #cf392e;
+  text-decoration: underline;
 }

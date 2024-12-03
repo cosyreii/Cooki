@@ -7,7 +7,7 @@ let count = 0;
 function DisplayCount() {
   // % means Modulo, it does magic stuff (remainder of a division) - in this case count % 10 = every multiple of 10 returns you back to 0.
   if (count == 0) {
-    header.innerText = "start clicking bitch -Josh";
+    header.innerText = "start clicking bish -Josh";
   } else if (count % 100 == 0) {
     header.innerText = "yippee " + count.toString() + " cookies!";
   } else {
@@ -49,3 +49,8 @@ resetButton.addEventListener("click", function () {
   localStorage.removeItem("CookieCount");
   DisplayCount();
 });
+
+// setInterval(function () {
+//   count++;
+//   DisplayCount();
+// }, 1000);
