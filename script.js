@@ -9,8 +9,8 @@ function DisplayCount() {
   // % means Modulo, it does magic stuff (remainder of a division) - in this case count % 10 = every multiple of 10 returns you back to 0.
   if (count == 0) {
     header.innerText = "start clicking bish -Josh";
-  } else if (count % 100 == 0) {
-    header.innerText = "yippee " + count.toString() + " cookies!";
+  // } else if (count % 100 == 0) {
+  //   header.innerText = "yippee " + count.toString() + " cookies!";
   } else {
     header.innerText = "nom " + count.toString() + " cookies";
   }
@@ -55,6 +55,7 @@ ACButton.addEventListener("click", function () {
   DisplayCount();
   let newInterval = setInterval(function () {
     count++;
+    localStorage.setItem("CookieCount", count.toString())
     DisplayCount();
   }, 1000);
   AutoClickers.push(newInterval);
@@ -66,6 +67,6 @@ resetButton.addEventListener("click", function () {
   DisplayCount();
   for (let Clicker of AutoClickers) {
     clearInterval(Clicker);
-  } 
+  }
   AutoClickers = [];
 });
