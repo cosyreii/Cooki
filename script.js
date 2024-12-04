@@ -9,10 +9,10 @@ function DisplayCount() {
   // % means Modulo, it does magic stuff (remainder of a division) - in this case count % 10 = every multiple of 10 returns you back to 0.
   if (count == 0) {
     header.innerText = "start clicking bish -Josh";
-  // } else if (count % 100 == 0) {
-  //   header.innerText = "yippee " + count.toString() + " cookies!";
+    // } else if (count % 100 == 0) {
+    //   header.innerText = "yippee " + count.toString() + " cookies!";
   } else {
-    header.innerText = "nom " + count.toString() + " cookies";
+    header.innerText = "nom " + Math.floor(count).toString() + " cookies";
   }
 }
 
@@ -45,28 +45,41 @@ cookiButton.addEventListener("click", function () {
   DisplayCount();
 });
 
-let AutoClickers = [];
+// let AutoClickers = [];
+
+// ACButton.addEventListener("click", function () {
+//   if (count < 10) return;
+
+//   count -= 10;
+//   localStorage.setItem("CookieCount", count.toString());
+//   DisplayCount();
+//   let newInterval = setInterval(function () {
+//     count++;
+//     localStorage.setItem("CookieCount", count.toString())
+//     DisplayCount();
+//   }, 1000);
+//   AutoClickers.push(newInterval);
+// });
+
+let AutoClickerSpeed = 0;
 
 ACButton.addEventListener("click", function () {
   if (count < 10) return;
-
   count -= 10;
   localStorage.setItem("CookieCount", count.toString());
   DisplayCount();
-  let newInterval = setInterval(function () {
-    count++;
-    localStorage.setItem("CookieCount", count.toString())
-    DisplayCount();
-  }, 1000);
-  AutoClickers.push(newInterval);
+  AutoClickerSpeed += 0.01;
 });
+
+setInterval(function () {
+  count += AutoClickerSpeed;
+  DisplayCount();
+  localStorage.setItem("CookieCount", count.toString());
+}, 10);
 
 resetButton.addEventListener("click", function () {
   count = 0;
   localStorage.removeItem("CookieCount");
   DisplayCount();
-  for (let Clicker of AutoClickers) {
-    clearInterval(Clicker);
-  }
-  AutoClickers = [];
+  AutoClickerSpeed = 0;
 });
