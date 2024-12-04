@@ -1,5 +1,123 @@
 body {
+  user-select: none;
   background: #fff8d9;
   color: #693406;
   font-family: "Comic Sans MS";
+}
+
+a {
+  text-decoration: none;
+}
+
+.Credit {
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Josh {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.JoshButton {
+  border: none;
+  background: none;
+
+  position: relative;
+  padding: 15px 40px;
+
+  width: 10rem;
+  height: 10rem;
+
+  border-radius: 500px;
+  overflow: clip;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+
+  transition: all 0.05s;
+}
+
+.JoshButton img {
+  position: absolute;
+  left: -3px;
+  top: 0%;
+  width: 105%;
+}
+
+.JoshButton:hover {
+  scale: 1.1;
+}
+
+.JoshButton:active {
+  scale: 0.95;
+}
+
+.JoshLink {
+  color: #693406;
+  margin: 0%;
+  border-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Reii {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReiiButton {
+  border: none;
+  background: none;
+
+  position: relative;
+  padding: 15px 40px;
+
+  width: 10rem;
+  height: 10rem;
+
+  border-radius: 500px;
+  overflow: clip;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+
+  transition: all 0.05s;
+}
+
+.ReiiButton img {
+  position: absolute;
+  left: -1px;
+  top: 0%;
+  width: 100%;
+}
+
+.ReiiButton:hover {
+  scale: 1.1;
+}
+
+.ReiiButton:active {
+  scale: 0.95;
+}
+
+.ReiiLink {
+  color: #693406;
+  margin: 0%;
+  border-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
